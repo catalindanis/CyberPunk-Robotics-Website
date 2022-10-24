@@ -1,0 +1,598 @@
+body,html{
+    overflow: hidden;
+    height: 100vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* root version */
+div.root{
+    animation: load_buttons_animation 1s;
+}
+
+div.root div.background_desktop img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+div.root div.navigation_bar_desktop{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    left: 69vw;
+    top: -40vh;
+    animation: load_buttons_animation 1s;
+}
+
+div.root div.navigation_bar_desktop div img{
+    width: 7vmax;
+    animation: load_logo_animation 1s;
+}
+
+div.root div.navigation_bar_desktop div:hover{
+    animation: shake_animation 1s;
+    opacity: 1;
+    animation-iteration-count: infinite;
+}
+
+div.root div.navigation_bar_desktop a{
+    font-family: montserrat-bold;
+    margin-right: 2.3vmax;
+    color: black;
+    text-decoration: none;
+    font-size: 1.3vmax; 
+}
+
+div.root div.navigation_bar_desktop a:hover{
+    transform: translateY(-2px);
+    animation: button_hover_animation 0.08s;
+    text-decoration: underline 0.15vmax;
+}
+
+div.root div.text{
+    position: absolute;
+    top: 27vh;
+    left: 70vw;
+    text-align: center;
+}
+
+div.root div.text pre#nume{
+    /* position: absolute;
+    top: 30vh;
+    left: 68vw; */
+    color: rgb(48,42,119);
+    letter-spacing: 0.4vmax;
+    font-size: 4vmax;
+    font-family: hermes-regular;
+    margin-bottom: 10vh;
+}
+
+div.root div.text pre#citat{
+    /* position: absolute;
+    top: 60vh;
+    left: 70vw; */
+    color: black;
+    font-size: 1.2vmax;
+    font-family: montserrat-bold;
+}
+
+div.root div.social_media{
+    display: flex;
+    position: absolute;
+    top: 90vh;
+    left: 76vw;
+}
+
+div.root div.social_media a{
+    margin-left: 2vw;
+}
+
+div.root div.social_media a img{
+    height: 2.6vmax;
+    width: 2.6vmax;
+}
+
+div.root div.social_media a:hover{
+    animation: social_media_hover_animation 0.2s;
+    transform: translateY(-0.2vmax);
+}
+
+div.root div.navigation_bar_mobile{
+    display: none;
+    animation: load_buttons_animation_mobile 1s;
+    position: absolute;
+    /* top: 1vh;
+    right: 1vw; */
+    top: 5vh;
+    width: 100vw;
+}
+
+div.root div.navigation_bar_mobile input{
+    position: absolute;
+    width: 6vmax;
+    height: 6vmax;
+    right: 3vw;
+}
+
+div.root div.navigation_bar_mobile div.logo{
+    animation: load_logo_animation_mobile 1s;
+    position: absolute;
+    left: 3vw;  
+}
+
+div.root div.navigation_bar_mobile div.logo img{
+    width: 8vh;
+}
+
+div.root div.background_mobile img{
+    height: 100vh;
+    width: 130vw;
+}
+
+div.root div.menu{
+    display: none;
+    position: absolute;
+    top: 0vh;
+    background-color: white;
+    height: 100vh;
+    right: 0;
+    width: 65vw;
+}
+
+div.root div.menu button{
+    position: relative;
+    font-size: 5vh;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: transparent;
+    border: 2px solid;
+    left: 85.5%;
+    color: rgb(48,42,119);
+}
+
+div.root div.menu img{
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: relative;
+    top: 5%;
+    display: flex;
+    width: 14vh;
+    height: 14vh;
+}
+
+div.root div.menu ul{
+    
+    display: inline-block;
+    align-items: center;
+    margin-left: 0;
+    position: absolute; 
+    top: 30%; 
+    list-style: none;
+    text-align: center;
+    font-size: 7vw;
+}
+
+div.root div.menu ul li{
+    margin-top: 5vh;
+}
+
+div.root div.menu ul li a{
+    text-decoration: none;
+    color: rgb(48,42,119);
+    font-family: montserrat-bold;
+}
+
+div.root div.menu div.social_media{
+    position: absolute;
+    top: 75vh;
+}
+
+div.root div.menu div.social_media a img{
+    height: 5vmax;
+    width: 5vmax;
+}
+
+@media screen and (max-width: 1536px){
+    div.root div.navigation_bar_desktop{
+        display: block;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        left: 65vw;
+        top: -38vh;
+        animation: load_buttons_animation 1s;
+    }
+    div.root div.navigation_bar_desktop div img{
+        width: 7.5vmax;
+        animation: load_logo_animation 1s;
+    }
+    div.root div.navigation_bar_desktop a{
+        font-family: montserrat-bold;
+        margin-right: 2.5vmax;
+        color: black;
+        text-decoration: none;
+        font-size: 1.5vmax;
+    }
+    div.root div.text{
+        position: absolute;
+        top: 27vh;
+        left: 66vw;
+        text-align: center;
+    }
+    
+    div.root div.text pre#nume{
+        /* position: absolute;
+        top: 30vh;
+        left: 68vw; */
+        color: rgb(48,42,119);
+        letter-spacing: 0.4vmax;
+        font-size: 4.5vmax;
+        font-family: hermes-regular;
+        margin-bottom: 10vh;
+    }
+    
+    div.root div.text pre#citat{
+        /* position: absolute;
+        top: 60vh;
+        left: 70vw; */
+        color: black;
+        font-size: 1.2vmax;
+        font-family: montserrat-bold;
+    }
+    
+    div.root div.social_media{
+        display: flex;
+        position: absolute;
+        top: 90vh;
+        left: 71vw;
+    }
+    
+    div.root div.social_media a{
+        margin-left: 2.3vw;
+    }
+    
+    div.root div.social_media a img{
+        height: 3.1vmax;
+        width: 3.1vmax;
+    }
+
+    div.root div.navigation_bar_mobile{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    div.root div.navigation_bar_desktop{
+        display: block;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        left: 61vw;
+        top: -40vh;
+        animation: load_buttons_animation 1s;
+    }
+    
+    div.root div.navigation_bar_desktop div img{
+        width: 8vmax;
+        animation: load_logo_animation 1s;
+    }
+
+    div.root div.navigation_bar_desktop a{
+        font-family: montserrat-bold;
+        margin-right: 2.7vmax;
+        color: black;
+        text-decoration: none;
+        font-size: 1.7vmax;
+    }
+
+    div.root div.text{
+        position: absolute;
+        top: 27vh;
+        left: 58vw;
+        text-align: center;
+    }
+
+    div.root div.text pre#nume{
+        /* position: absolute;
+        top: 30vh;
+        left: 68vw; */
+        color: rgb(48,42,119);
+        letter-spacing: 0.4vmax;
+        font-size: 6vmax;
+        font-family: hermes-regular;
+        margin-bottom: 10vh;
+    }
+
+    div.root div.text pre#citat{
+        /* position: absolute;
+        top: 60vh;
+        left: 70vw; */
+        color: black;
+        font-size: 1.5vmax;
+        font-family: montserrat-bold;
+    }
+
+    div.root div.social_media{
+        display: flex;
+        position: absolute;
+        top: 90vh;
+        left: 71vw;
+    }
+
+    div.root div.social_media a{
+        margin-left: 2.3vw;
+    }
+
+    div.root div.social_media a img{
+        height: 4vmax;
+        width: 4vmax;
+    }
+
+    div.root div.navigation_bar_mobile{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 990px){
+    div.root div.navigation_bar_desktop{
+        display: none;
+    }
+
+    div.root div.navigation_bar_mobile{
+        display: block;
+    }
+
+    div.root div.text{
+        position: absolute;
+        margin: auto;
+        top: 25vh;
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+    
+    div.root div.text pre#nume{
+        color: rgb(48,42,119);
+        letter-spacing: 0.4vmax;
+        font-size: 7vh;
+        font-family: hermes-regular;
+        margin-bottom: 10vh;
+    }
+    
+    div.root div.text pre#citat{
+        color: black;
+        font-size: 2vh;
+        font-family: montserrat-bold;
+    }
+
+    div.root div.background_desktop{
+        
+    }
+
+    div.root div.background_mobile{
+        display: none;
+    }
+
+    div.root div.background_mobile img{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    div.root div.social_media{
+        display: flex;
+        top: 80vh;
+        margin: auto;
+        right: 0;
+        left: 0;
+        width: fit-content;
+    }
+    
+    div.root div.social_media a{
+        margin-left: 5vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.root div.social_media a img{
+        height: 5vh;
+        width: 5vh;
+    }
+}
+
+@media screen and (max-width: 760px){
+    div.root div.background_mobile img{
+        height: 100vh;
+        width: 115vw;
+    }
+}
+
+@media screen and (max-width: 660px){
+    div.root div.background_mobile img{
+        height: 100vh;
+        width: 115vw;
+    }
+}
+
+@media screen and (max-width: 620px){
+    div.root div.background_mobile img{
+        height: 100vh;
+        width: 120vw;
+    }
+}
+
+@font-face {
+    font-family: montserrat-bold;
+    src: url(/Resources/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: hermes-regular;
+    src: url(/Resources/Hermes-Regular.otf);
+}
+
+@keyframes button_hover_animation {
+    0% {text-decoration: underline 0.03vmax;}
+    25% {text-decoration: underline 0.06vmax;}
+    50% {text-decoration: underline 0.09vmax;}
+    75% {text-decoration: underline 0.12vmax;}
+    100% {text-decoration: underline 0.15vmax;}
+}
+
+@keyframes shake_animation {
+    0% { transform: translate(0.1vh, 0.1vw) rotate(0deg); }
+  10% { transform: translate(-0.1vh, -0.2vw) rotate(-1deg); }
+  20% { transform: translate(-0.3vh, 0vw) rotate(1deg); }
+  30% { transform: translate(0.3vh, 0.2vw) rotate(0deg); }
+  40% { transform: translate(0.1vh, -0.1vw) rotate(1deg); }
+  50% { transform: translate(-0.1vh, 0.2vw) rotate(-1deg); }
+  60% { transform: translate(-0.3vh, 0.1vw) rotate(0deg); }
+  70% { transform: translate(0.3vh, 0.1vw) rotate(-1deg); }
+  80% { transform: translate(-0.1vh, -0.1vw) rotate(1deg); }
+  90% { transform: translate(0.1vh, 0.2vw) rotate(0deg); }
+  100% { transform: translate(0.1vh, -0.2vw) rotate(-1deg); }
+}
+
+@keyframes load_buttons_animation {
+    0% { 
+        top: 10px;
+        opacity: 0.1;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    50% { 
+        opacity: 0.5;
+    }
+    75% { 
+        opacity: 0.7;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+
+@keyframes load_buttons_animation_mobile {
+    0% { 
+        transform: translateX(-100px);
+        opacity: 0.1;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    50% { 
+        opacity: 0.5;
+    }
+    75% { 
+        opacity: 0.7;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+
+@keyframes load_logo_animation {
+    0% { 
+        transform: translateX(15px);
+        opacity: 0.1;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    50% { 
+        right: 10px;
+        opacity: 0.5;
+    }
+    75% { 
+        opacity: 0.7;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+
+@keyframes load_logo_animation_mobile {
+    0% { 
+        transform: translateX(-100px);
+        opacity: 0.1;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    50% { 
+        opacity: 0.5;
+    }
+    75% { 
+        opacity: 0.7;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+
+@keyframes social_media_hover_animation{
+    0%{
+        transform: translateY(-0.02vmax);
+    }
+    10%{
+
+    }
+    20%{
+        transform: translateY(-0.04vmax);
+    }
+    30%{
+        transform: translateY(-0.06vmax);
+    }
+    40%{
+        transform: translateY(-0.08vmax);
+    }
+    50%{
+        transform: translateY(-0.1vmax);
+    }
+    60%{
+        transform: translateY(-0.12vmax);
+    }
+    70%{
+        transform: translateY(-0.14vmax);
+    }
+    80%{
+        transform: translateY(-0.16vmax);
+    }
+    90%{
+        transform: translateY(-0.18vmax);
+    }
+    100%{
+        transform: translateY(-0.2vmax);
+    }
+}
+
+@keyframes load_menu_mobile {
+    0%{
+        right: -50%;
+    }
+}
+
+@keyframes close_menu_mobile{
+    0%{
+    }
+    100%{
+        right: -60%;
+    }
+}
+
+img {
+    pointer-events: none;
+}
