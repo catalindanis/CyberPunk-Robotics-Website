@@ -12,6 +12,10 @@ body,html{
     -webkit-tap-highlight-color: transparent;
 }
 
+body{
+    position: relative;
+}
+
 /* root version */
 div.root{
     animation: load_buttons_animation 1s;
@@ -150,12 +154,12 @@ div.root div.menu{
 }
 
 div.root div.menu button{
-    position: relative;
+    position: absolute;
     font-size: 5vh;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: transparent;
     border: 2px solid;
-    left: 85.5%;
+    right: 0;
     color: rgb(48,42,119);
 }
 
@@ -171,12 +175,12 @@ div.root div.menu img{
 }
 
 div.root div.menu ul{
-    
-    display: inline-block;
-    align-items: center;
-    margin-left: 0;
-    position: absolute; 
+    display: block;
+    position: absolute;
+    padding: 0px; 
     top: 30%; 
+    right: 0;
+    left: 0;
     list-style: none;
     text-align: center;
     font-size: 7vw;
@@ -345,6 +349,8 @@ div.root div.menu div.social_media a img{
     div.root div.navigation_bar_mobile{
         display: none;
     }
+
+
 }
 
 @media screen and (max-width: 990px){
@@ -379,10 +385,6 @@ div.root div.menu div.social_media a img{
         font-family: montserrat-bold;
     }
 
-    div.root div.background_desktop{
-        
-    }
-
     div.root div.background_mobile{
         display: none;
     }
@@ -402,7 +404,8 @@ div.root div.menu div.social_media a img{
     }
     
     div.root div.social_media a{
-        margin-left: 5vw;
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
         justify-content: center;
         align-items: center;
     }
@@ -411,6 +414,11 @@ div.root div.menu div.social_media a img{
         height: 5vh;
         width: 5vh;
     }
+
+    div.root div.menu ul{
+        top: 22%; 
+        font-size: 5vh;
+    }
 }
 
 @media screen and (max-width: 760px){
@@ -418,12 +426,22 @@ div.root div.menu div.social_media a img{
         height: 100vh;
         width: 115vw;
     }
+
+    div.root div.menu ul{
+        top: 21%; 
+        font-size: 7vw;
+    }
 }
 
 @media screen and (max-width: 660px){
     div.root div.background_mobile img{
         height: 100vh;
         width: 115vw;
+    }
+
+    div.root div.menu ul{
+        top: 27vh; 
+        font-size: 7vw;
     }
 }
 
