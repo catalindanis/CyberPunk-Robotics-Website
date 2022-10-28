@@ -183,7 +183,7 @@ div.root div.menu ul{
     left: 0;
     list-style: none;
     text-align: center;
-    font-size: 7vw;
+    font-size: 7vh;
 }
 
 div.root div.menu ul li{
@@ -202,8 +202,8 @@ div.root div.menu div.social_media{
 }
 
 div.root div.menu div.social_media a img{
-    height: 5vmax;
-    width: 5vmax;
+    height: 5vh;
+    width: 5vh;
 }
 
 @media screen and (max-width: 1536px){
@@ -428,8 +428,8 @@ div.root div.menu div.social_media a img{
     }
 
     div.root div.menu ul{
-        top: 21%; 
-        font-size: 7vw;
+        top: 21vh; 
+        font-size: 5vh;
     }
 }
 
@@ -440,8 +440,8 @@ div.root div.menu div.social_media a img{
     }
 
     div.root div.menu ul{
-        top: 27vh; 
-        font-size: 7vw;
+        top: 24vh; 
+        font-size: 5vh;
     }
 }
 
