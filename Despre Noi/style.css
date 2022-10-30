@@ -1,23 +1,26 @@
 body,html{
-    overflow: hidden;
     height: 100vh;
-    margin: auto;
-    position: static;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
     -webkit-tap-highlight-color: transparent;
 }
 
-/* desktop version */
-div.desktop{
+body{
+    overflow-x: hidden;
+}
+
+/* root version */
+div.root{
     animation: load_buttons_animation 1s;
 }
 
-div.desktop div.background img{
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-}
-
-div.desktop div.navigation_bar{
+div.root div.navigation_bar_desktop{
     position: absolute;
     display: flex;
     align-items: center;
@@ -28,171 +31,75 @@ div.desktop div.navigation_bar{
     animation: load_buttons_animation 1s;
 }
 
-div.desktop div.navigation_bar div img{
+div.root div.navigation_bar_desktop div img{
     width: 7vmax;
     animation: load_logo_animation 1s;
 }
 
-div.desktop div.navigation_bar div:hover{
+div.root div.navigation_bar_desktop div:hover{
     animation: shake_animation 1s;
     opacity: 1;
     animation-iteration-count: infinite;
 }
 
-div.desktop div.navigation_bar a{
+div.root div.navigation_bar_desktop a{
     font-family: montserrat-bold;
     margin-right: 2.3vmax;
     color: black;
     text-decoration: none;
-    font-size: 1.3vmax;
+    font-size: 1.3vmax; 
 }
 
-div.desktop div.navigation_bar a:hover{
+div.root div.navigation_bar_desktop a:hover{
     transform: translateY(-2px);
     animation: button_hover_animation 0.08s;
     text-decoration: underline 0.15vmax;
 }
 
-div.desktop div.text{
-    position: absolute;
-    top: 27vh;
-    left: 70vw;
-    text-align: center;
-}
 
-div.desktop div.text pre#nume{
-    /* position: absolute;
-    top: 30vh;
-    left: 68vw; */
-    color: rgb(48,42,119);
-    letter-spacing: 0.4vmax;
-    font-size: 4vmax;
-    font-family: hermes-regular;
-    margin-bottom: 10vh;
-}
-
-div.desktop div.text pre#citat{
-    /* position: absolute;
-    top: 60vh;
-    left: 70vw; */
-    color: black;
-    font-size: 1.2vmax;
-    font-family: montserrat-bold;
-}
-
-div.desktop div.social_media{
-    display: flex;
-    position: absolute;
-    top: 90vh;
-    left: 76vw;
-}
-
-div.desktop div.social_media a{
+div.root div.social_media a{
     margin-left: 2vw;
 }
 
-div.desktop div.social_media a img{
+div.root div.social_media a img{
     height: 2.6vmax;
     width: 2.6vmax;
 }
 
-div.desktop div.social_media a:hover{
+div.root div.social_media a:hover{
     animation: social_media_hover_animation 0.2s;
     transform: translateY(-0.2vmax);
 }
 
-/* mobile version */
-div.mobile{
-    margin: 0px;
-}
-
-div.mobile div.elements{
-    position: relative;
-    animation: load_buttons_animation 1s;
-}
-
-div.mobile div.elements div.background img{
-    height: 100vh;
-    width: 130vw;
-}
-
-div.mobile div.elements div.navigation_bar{
+div.root div.navigation_bar_mobile{
+    display: none;
     animation: load_buttons_animation_mobile 1s;
     position: absolute;
     /* top: 1vh;
     right: 1vw; */
     top: 5vh;
-    right: 8vw;
+    width: 100vw;
 }
 
-div.mobile div.elements div.navigation_bar input{
-    /* width: 13vmax;
-    height: 13vmax; */
+div.root div.navigation_bar_mobile input{
+    position: absolute;
     width: 6vmax;
     height: 6vmax;
+    right: 3vw;
 }
 
-div.mobile div.elements div.logo{
+div.root div.navigation_bar_mobile div.logo{
     animation: load_logo_animation_mobile 1s;
     position: absolute;
-    top: 4.5vh;
-    left: 6vw;
+    left: 3vw;  
 }
 
-div.mobile div.elements div.logo img{
-    width: 100%;
+div.root div.navigation_bar_mobile div.logo img{
+    width: 8vh;
 }
 
-div.mobile div.elements div.text{
-    position: absolute;
-    top: 26vh;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    margin-bottom: 100px;
-}
-
-div.mobile div.elements div.text pre#nume{
-    /* position: absolute;
-    top: 25vh;
-    left: 5vw;
-    right: 5vw; */
-    text-align: center;
-    color: rgb(48,42,119);
-    letter-spacing: 0.4vmax;
-    font-size: 15vw;
-    font-family: hermes-regular;
-}
-
-div.mobile div.elements div.text pre#citat{
-    /* position: absolute;
-    top: 50vh;
-    left: 10vw;
-    right: 10vw; */
-    color: black;
-    font-size: 5vw;
-    font-family: montserrat-bold;
-}
-
-div.mobile div.elements div.social_media{
-    display: flex;
-    position: absolute;
-    top: 80vh;
-    left: 50%;
-    -webkit-transform: translateX(-40%);
-    transform: translateX(-50%);
-}
-
-div.mobile div.elements div.social_media a{
-    margin: 3vw;
-}
-
-div.mobile div.elements div.social_media a img{
-    height: 6vmax;
-    width: 6vmax;
-}
-
-div.mobile div.elements div.menu{
+div.root div.menu{
+    display: none;
     position: absolute;
     top: 0vh;
     background-color: white;
@@ -201,18 +108,20 @@ div.mobile div.elements div.menu{
     width: 65vw;
 }
 
-div.mobile div.elements div.menu button{
-    position: relative;
+div.root div.menu button{
+    position: absolute;
     font-size: 5vh;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: transparent;
     border: 2px solid;
-    left: 85.5%;
+    right: 0;
     color: rgb(48,42,119);
 }
 
-div.mobile div.elements div.menu img{
+div.root div.menu img{
     margin: auto;
+    left: 0;
+    right: 0;
     position: relative;
     top: 5%;
     display: flex;
@@ -220,38 +129,421 @@ div.mobile div.elements div.menu img{
     height: 14vh;
 }
 
-div.mobile div.elements div.menu ul{
-    position: relative; 
-    top: 10%; 
-    left: -4%;
+div.root div.menu ul{
+    display: block;
+    position: absolute;
+    padding: 0px; 
+    top: 30%; 
+    right: 0;
+    left: 0;
     list-style: none;
     text-align: center;
-    font-size: 7vw;
+    font-size: 7vh;
 }
 
-div.mobile div.elements div.menu ul li{
+div.root div.menu ul li{
     margin-top: 5vh;
 }
 
-div.mobile div.elements div.menu ul li a{
+div.root div.menu ul li a{
     text-decoration: none;
     color: rgb(48,42,119);
     font-family: montserrat-bold;
 }
 
-div.mobile div.elements div.menu div.social_media{
+div.root div.menu div.social_media{
     position: absolute;
     top: 75vh;
 }
 
-div.mobile div.elements div.menu div.social_media a img{
-    height: 5vmax;
-    width: 5vmax;
+div.root div.menu div.social_media a img{
+    height: 5vh;
+    width: 5vh;
+}
+
+div.root div.informations{
+    position: absolute;
+    top: 15vh;
+    padding: 10px;
+    width: 50vw;
+}
+
+div.root div.informations div.cine_suntem b{
+    font-size: 47px;
+    font-family: montserrat-bold;
+    color: rgb(48,42,119);
+    border-bottom: 2px solid;
+}
+
+div.root div.informations div.cine_suntem p{
+    font-size: 32px;
+    font-family: montserrat-thin;
+    font-weight: 1000;
+}
+
+div.root div.informations div.cine_suntem div.images{
+    display: inline-block; 
+}
+
+div.root div.informations div.cine_suntem div.images img{
+    margin-left: 4.85px;
+    margin-right: 4.85px;
+    width: 16vw;
+}
+
+div.root div.informations div.cine_suntem div.images img.img1{
+    vertical-align: 25px;
+}
+
+div.root div.informations div.cine_suntem div.images img.img3{
+    vertical-align: 25px;
+}
+
+div.root div.informations div.cine_suntem div.oval{
+    margin-top: -80px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.oval {
+    height: 100px;
+    width: 45vw;
+    background-color: rgb(217,209,232);
+    border-radius: 100px / 70px;
+}
+
+@media screen and (max-width: 1900px){
+    div.root div.informations div.cine_suntem b{
+        font-size: 50px;
+        font-family: montserrat-bold;
+        color: rgb(48,42,119);
+        border-bottom: 2px solid;
+    }
+    
+    div.root div.informations div.cine_suntem p{
+        font-size: 35px;
+        font-family: montserrat-thin;
+        font-weight: 1000;
+    }
+}
+
+@media screen and (max-width: 1870px){
+    div.root div.informations div.cine_suntem b{
+        font-size: 48px;
+        font-family: montserrat-bold;
+        color: rgb(48,42,119);
+        border-bottom: 2px solid;
+    }
+    
+    div.root div.informations div.cine_suntem p{
+        font-size: 33px;
+        font-family: montserrat-thin;
+        font-weight: 1000;
+    }
+
+    div.root div.informations div.cine_suntem div.images img{
+        margin-left: 4.70px;
+        margin-right: 4.80px;
+        width: 15.9vw;
+    }
+}
+
+@media screen and (max-width: 1600px){
+    div.root div.informations div.cine_suntem b{
+        font-size: 47px;
+        font-family: montserrat-bold;
+        color: rgb(48,42,119);
+        border-bottom: 2px solid;
+    }
+    
+    div.root div.informations div.cine_suntem p{
+        font-size: 34px;
+        font-family: montserrat-thin;
+        font-weight: 1000;
+    }
+
+    div.root div.informations div.cine_suntem div.images img{
+        margin-left: 4.70px;
+        margin-right: 4.80px;
+        width: 15.8vw;
+    }
+}
+
+@media screen and (max-width: 1536px){
+    div.root div.navigation_bar_desktop{
+        display: block;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        left: 65vw;
+        top: -38vh;
+        animation: load_buttons_animation 1s;
+    }
+    div.root div.navigation_bar_desktop div img{
+        width: 7.5vmax;
+        animation: load_logo_animation 1s;
+    }
+    div.root div.navigation_bar_desktop a{
+        font-family: montserrat-bold;
+        margin-right: 2.5vmax;
+        color: black;
+        text-decoration: none;
+        font-size: 1.5vmax;
+    }
+
+    div.root div.social_media{
+        display: flex;
+        position: absolute;
+        top: 90vh;
+        left: 71vw;
+    }
+    
+    div.root div.social_media a{
+        margin-left: 2.3vw;
+    }
+    
+    div.root div.social_media a img{
+        height: 3.1vmax;
+        width: 3.1vmax;
+    }
+
+    div.root div.navigation_bar_mobile{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1400px){
+    div.root div.informations div.cine_suntem b{
+        font-size: 47px;
+        font-family: montserrat-bold;
+        color: rgb(48,42,119);
+        border-bottom: 2px solid;
+    }
+    
+    div.root div.informations div.cine_suntem p{
+        font-size: 34px;
+        font-family: montserrat-thin;
+        font-weight: 1000;
+    }
+
+    div.root div.informations div.cine_suntem div.images img{
+        margin-left: 4.70px;
+        margin-right: 4.80px;
+        width: 15.7vw;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    div.root div.navigation_bar_desktop{
+        display: block;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        left: 61vw;
+        top: -40vh;
+        animation: load_buttons_animation 1s;
+    }
+    
+    div.root div.navigation_bar_desktop div img{
+        width: 8vmax;
+        animation: load_logo_animation 1s;
+    }
+
+    div.root div.navigation_bar_desktop a{
+        font-family: montserrat-bold;
+        margin-right: 2.7vmax;
+        color: black;
+        text-decoration: none;
+        font-size: 1.7vmax;
+    }
+
+    div.root div.social_media{
+        display: flex;
+        position: absolute;
+        top: 90vh;
+        left: 71vw;
+    }
+
+    div.root div.social_media a{
+        margin-left: 2.3vw;
+    }
+
+    div.root div.social_media a img{
+        height: 4vmax;
+        width: 4vmax;
+    }
+
+    div.root div.navigation_bar_mobile{
+        display: none;
+    }
+
+    div.root div.informations{
+        position: absolute;
+        top: 17vh;
+        padding: 8px;
+        width: 100vw;
+    }
+
+    div.root div.informations div.cine_suntem b{
+        font-size: 5vh;
+        font-family: montserrat-bold;
+        color: rgb(48,42,119);
+        border-bottom: 2px solid;
+    }
+    
+    div.root div.informations div.cine_suntem p{
+        font-size: 3vh;
+        font-family: montserrat-thin;
+        font-weight: 1000;
+        margin-right: 15px;
+    }
+
+    div.root div.informations div.cine_suntem div.images img{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 30.5vw;
+    }
+
+    .oval {
+        height: 100px;
+        width: 88vw;
+        background-color: rgb(217,209,232);
+        border-radius: 100px / 70px;
+    }
+
+    div.root div.informations div.cine_suntem div.oval{
+        margin-top: -80px;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 990px){
+    div.root div.navigation_bar_desktop{
+        display: none;
+    }
+
+    div.root div.navigation_bar_mobile{
+        display: block;
+    }
+
+    div.root div.social_media{
+        display: flex;
+        top: 80vh;
+        margin: auto;
+        right: 0;
+        left: 0;
+        width: fit-content;
+    }
+    
+    div.root div.social_media a{
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.root div.social_media a img{
+        height: 5vh;
+        width: 5vh;
+    }
+
+    div.root div.menu ul{
+        top: 22%; 
+        font-size: 5vh;
+    }
+
+    div.root div.informations div.cine_suntem div.images img{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 30.5vw;
+    }
+}
+
+@media screen and (max-width: 900px){
+    div.root div.informations div.cine_suntem div.oval{
+        margin-top: -80px;
+        margin-left: 40px;
+    }
+
+    div.root div.informations div.cine_suntem div.images img{
+        margin-left: 7px;
+        margin-right: 10px;
+        width: 30.5vw;
+    }
+}
+
+@media screen and (max-width: 830px){
+    div.root div.informations div.cine_suntem div.images img{
+        margin-left: 5px;
+        margin-right: 10px;
+        width: 30.5vw;
+    }
+
+    div.root div.informations div.cine_suntem div.oval{
+        margin-top: -80px;
+        margin-left: 35px;
+    }
+}
+
+@media screen and (max-width: 760px){
+    div.root div.menu ul{
+        top: 21vh; 
+        font-size: 5vh;
+    }
+
+    div.root div.informations div.cine_suntem div.oval{
+        margin-top: -80px;
+        margin-left: 29px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    div.root div.informations div.cine_suntem div.images img{
+        margin-left: 3px;
+        margin-right: 10px;
+        width: 30.5vw;
+    }
+
+    div.root div.informations div.cine_suntem div.oval{
+        margin-top: -80px;
+        margin-left: 25px;
+    }
+}
+
+@media screen and (max-width: 660px){
+    div.root div.informations div.cine_suntem div.images img{
+        margin-left: 1.15px;
+        margin-right: 10px;
+        width: 30.5vw;
+    }
+
+    div.root div.menu ul{
+        top: 24vh; 
+        font-size: 5vh;
+    }
+}
+
+@media screen and (max-width: 620px){
+    
 }
 
 @font-face {
     font-family: montserrat-bold;
     src: url(/Resources/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: montserrat-regular;
+    src: url(/Resources/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: montserrat-thin;
+    src: url(/Resources/Montserrat-Thin.otf);
 }
 
 @font-face {

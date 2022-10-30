@@ -12,69 +12,49 @@
 </head>
 
 <body>
-    <div class="desktop" style="display:none">
-        <div class="background">
-            <img src="/Resources/">
-        </div>
-        <div class="navigation_bar">
-            <a href="">Home</a>
+    <div class="root" style="display:none">
+        <div class="navigation_bar_desktop">
+            <a href="/Home/index.html">Home</a>
             <a href="/Contact/index.html">Contact</a>
-            <a href="/Despre Noi/index.html">Despre noi</a>
+            <a href="">Despre noi</a>
             <div><img src="/Resources/logo.png"></div>
         </div>
-        <!-- <div class="text">
-            <pre id="nume">Cyberpunk<br>Robotics</pre>
-            <pre id="citat">“BUILD IT SIMPLE, FUNCTIONAL,<br>TO BE FAST”</pre>
-        </div> -->
-        <!-- <div class="social_media">
-            <a href="https://www.facebook.com/cyberpunkrobotics" target="_blank"><img src="/Resources/buton facebook.png" alt=""></a>
-            <a href="https://www.instagram.com/cyberpunk_ro050/" target="_blank"><img src="/Resources/buton instagram.png" alt=""></a>
-            <a href="https://www.tiktok.com/@gettheproduct" target="_blank"><img src="/Resources/tiktok buton.png" alt=""></a>
-            <a href="https://www.youtube.com/channel/UC6GAoEasdeJVzq6ccxZgO5w" target="_blank"><img src="/Resources/youtube buton.png" alt=""></a>
-        </div> -->
-    </div>
-    <div class="mobile" style="display:none">
-        <!-- <div class="menu">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Despre Noi</a></li>
-            </ul>
-        </div> -->
-        <div class="elements">
-            <div class="background">
-                <img src="/Resources/background_home_mobile.jpg" alt="">
-            </div>
-            <div class="navigation_bar">
-                <input type="image" src="/Resources/navigation_bar_button1.png" onclick="openNavigationBar()"/>
-            </div>
+        <div class="navigation_bar_mobile">
             <div class="logo">
                 <img src="/Resources/logo.png" alt="">
             </div>
-            <div class="text">
-                <pre id="nume">Cyberpunk<br>Robotics</pre>
-                <pre id="citat">“BUILD IT SIMPLE, FUNCTIONAL,<br>TO BE FAST”</pre>
+            <input type="image" src="/Resources/navigation_bar_button1.png" onclick="openNavigationBar()"/>
+        </div>
+        <div class="informations">
+            <div class="cine_suntem">
+                <b>Cine suntem?</b>
+                <p>
+                    Suntem un grup de elevi ai Colegiului Național „Mihai Viteazul” Turda, 
+                    care ne dedicăm o bună parte din timpul liber roboticii. Ne investim acea perioadă de timp 
+                    în această pasiune care ne unește. Împreună luptăm pentru a construi acest proiect an de an, 
+                    încercând de fiecare dată să evoluăm în ceea ce facem.
+                </p>
+                <div class="images">
+                    <img src="/Resources/noi3.jpg" alt="" class="img1">
+                    <img src="/Resources/grup.jpg" alt="" class="img2">
+                    <img src="/Resources/robot_medalie.jpg" alt="" class="img3">
+                </div>
+                <div class="oval"></div>
             </div>
+        </div>
+        <div class="menu" style="display: none;">
+            <button onclick="closeNavigationBar()">X</button>
+            <img src="/Resources/logo.png" alt="">
+            <ul>
+                <li><a href="/Home/index.html">Home</a></li>
+                <li><a href="/Contact/index.html">Contact</a></li>
+                <li><a href="">Despre Noi</a></li>
+            </ul>
             <div class="social_media">
                 <a href="https://www.facebook.com/cyberpunkrobotics" target="_blank"><img src="/Resources/buton facebook.png" alt=""></a>
                 <a href="https://www.instagram.com/cyberpunk_ro050/" target="_blank"><img src="/Resources/buton instagram.png" alt=""></a>
                 <a href="https://www.tiktok.com/@gettheproduct" target="_blank"><img src="/Resources/tiktok buton.png" alt=""></a>
                 <a href="https://www.youtube.com/channel/UC6GAoEasdeJVzq6ccxZgO5w" target="_blank"><img src="/Resources/youtube buton.png" alt=""></a>
-            </div>
-            <div class="menu" style="display: none;">
-                <button onclick="closeNavigationBar()">X</button>
-                <img src="/Resources/logo.png" alt="">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="/Contact/index.html">Contact</a></li>
-                    <li><a href="/Despre Noi/index.html">Despre Noi</a></li>
-                </ul>
-                <div class="social_media">
-                    <a href="https://www.facebook.com/cyberpunkrobotics" target="_blank"><img src="/Resources/buton facebook.png" alt=""></a>
-                    <a href="https://www.instagram.com/cyberpunk_ro050/" target="_blank"><img src="/Resources/buton instagram.png" alt=""></a>
-                    <a href="https://www.tiktok.com/@gettheproduct" target="_blank"><img src="/Resources/tiktok buton.png" alt=""></a>
-                    <a href="https://www.youtube.com/channel/UC6GAoEasdeJVzq6ccxZgO5w" target="_blank"><img src="/Resources/youtube buton.png" alt=""></a>
-                </div>
             </div>
         </div>
     </div>
