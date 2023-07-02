@@ -9,6 +9,7 @@ function init(){
 var menuIsOpened = false;
 
 function openNavigationBar(){
+    document.body.style.overflow = "hidden";
     document.getElementsByClassName("menu")[0].style.display = "block";
     document.getElementsByClassName("menu")[0].style.animation = "load_menu_mobile 1s";
     document.getElementsByClassName("logo")[0].style.opacity = "10%";
@@ -17,6 +18,7 @@ function openNavigationBar(){
 }
 
 function closeNavigationBar(){
+    document.body.style.overflow = "visible";
     document.getElementsByClassName("menu")[0].style.animation = "close_menu_mobile 1s";
     document.getElementsByClassName("logo")[0].style.opacity = "100%";
     document.getElementsByClassName("informations")[0].style.opacity = "100%";
@@ -30,6 +32,7 @@ window.addEventListener("resize", function() {
 });
 
 function closeMenuIfNeeded(){
+    console.log(window.innerWidth);
     if(window.innerWidth >= 990 && menuIsOpened)
         closeNavigationBar();
 }

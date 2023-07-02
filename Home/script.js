@@ -19,6 +19,7 @@ function openNavigationBar(){
 }
 
 function closeNavigationBar(){
+    
     document.getElementsByClassName("menu")[0].style.animation = "close_menu_mobile 1s";
     document.getElementsByClassName("background_desktop")[0].style.opacity = "100%";
     document.getElementsByClassName("logo")[0].style.opacity = "100%";

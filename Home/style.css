@@ -64,6 +64,7 @@ div.root div.navigation_bar_desktop a:hover{
 }
 
 div.root div.text{
+    animation: load_page_animation 1s;
     position: absolute;
     top: 27vh;
     left: 70vw;
@@ -91,6 +92,7 @@ div.root div.text pre#citat{
 }
 
 div.root div.social_media{
+    animation: load_social_media 1s;
     display: flex;
     position: absolute;
     top: 90vh;
@@ -452,6 +454,12 @@ div.root div.menu div.social_media a img{
     }
 }
 
+@media screen and (max-height: 520px){
+    div.root div.social_media{
+        display: none;
+    }
+}
+
 @font-face {
     font-family: montserrat-bold;
     src: url(/Resources/Montserrat-Bold.ttf);
@@ -597,6 +605,44 @@ div.root div.menu div.social_media a img{
     }
 }
 
+@keyframes load_page_animation{
+    0% { 
+        top: 500px;
+        opacity: 0.1;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    50% { 
+        opacity: 0.5;
+    }
+    75% { 
+        opacity: 0.7;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+
+@keyframes load_social_media{
+    0% { 
+        top: 110vh;
+        opacity: 0.1;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    50% { 
+        opacity: 0.5;
+    }
+    75% { 
+        opacity: 0.7;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+
 @keyframes load_menu_mobile {
     0%{
         right: -50%;
@@ -604,8 +650,6 @@ div.root div.menu div.social_media a img{
 }
 
 @keyframes close_menu_mobile{
-    0%{
-    }
     100%{
         right: -60%;
     }
